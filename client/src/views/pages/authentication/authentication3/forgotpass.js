@@ -23,7 +23,7 @@ const ResetPasswordForm = ({ onClose }) => {
         throw new Error('Token is missing');
       }
       
-      const response = await axios.post('http://localhost:8000/auth/reset-password', { token, password: values.password }); // Send token and password to the backend
+      const response = await axios.post('https://miscbit-10.onrender.com/auth/reset-password', { token, password: values.password }); // Send token and password to the backend
       if (response.data.success) {
         setSuccessMessage('Password reset successfully!');
         setTimeout(() => {
